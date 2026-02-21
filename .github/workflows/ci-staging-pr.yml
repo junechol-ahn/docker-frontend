@@ -38,7 +38,7 @@ jobs:
         run: zip -r deploy-package.zip . -x '*.git*' -x 'node_modules/*'
 
       - name: Deploy to EBS (Staging)
-        uses: aws-actions/aws-elasticbeanstalk-deploy@v1
+        uses: aws-actions/aws-elasticbeanstalk-deploy@v1.0.0
         with:
           aws-region: ${{ secrets.AWS_REGION }}
           application-name: ${{ secrets.EB_APPLICATION_NAME }}
